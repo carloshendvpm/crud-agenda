@@ -1,0 +1,18 @@
+
+CREATE TABLE `login`.`usuario` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `usuario` VARCHAR(200) NOT NULL,
+  `senha` VARCHAR(32) NOT NULL,
+  PRIMARY KEY (`usuario_id`));
+
+
+INSERT INTO `usuario` (`usuario`,`senha`) VALUES ('teste', md5('senhateste'));
+
+
+CREATE TABLE `agenda` (
+  `id` int(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `start_datetime` datetime NOT NULL,
+  `end_datetime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
